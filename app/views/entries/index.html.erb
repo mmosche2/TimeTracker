@@ -37,7 +37,8 @@
 				<% @current_read_date = entry.cal_date %>
 			<% end %>
 			
-			<div class="entry_row"> 
+
+			<div class="row_entry">
 				<div class="entry_row_entry_info">
 					<% if entry.project %>
 						<p class="entry_item project"> <%= entry.project.name %> </p>
@@ -47,51 +48,19 @@
 					
 					<p class="entry_item hours"><%= entry.hours %></p>
 					
-					<p class="entry_item tasks"><%= entry.tasks %></p>
-				</div>
-				
-				<div class="entry_row_action_options">
+					<div class="tasks_box">
+						<p class="entry_item tasks"><%= entry.tasks %></p>
+					</div>
+					
 					<p class="entry_item edit"><%= link_to 'Edit', edit_entry_path(entry) %></p>
 					<p class="entry_item delete"><%= link_to 'Delete', entry, confirm: 'Are you sure?', method: :delete %></p>
+			
 				</div>
+			
 			</div>
 		
 		<% end %>
 		
-<!-- THIS IS THE ENTRIES TABLE -- REPLACING WITH DIV		
-		<table class="entries">
-		  <tr>
-			<th>Project</th>
-			<th>Hours</th>
-			<th>Tasks</th>
-			<th>Day</th>
-			<th></th>
-			<th></th>
-		  </tr>
-
-		<% @entries.each do |entry| %>
-		  <tr>
-			<% if entry.project %>
-				<td class="entry_table project"><%= entry.project.name %></td>
-			<% else %>
-				<td class="entry_table project">{{No Project}}</td>
-			<% end %>
-			
-			<td class="entry_table hours"><%= entry.hours %></td>
-			<td class="entry_table tasks"><%= entry.tasks %></td>
-			
-			<% if entry.cal_date %>
-				<td class="entry_table cal_date"><%= entry.cal_date.to_s %></td>
-			<% else %>
-				<td class="entry_table cal_date">{{No Date}}</td>
-			<% end %>
-			
-			<td class="entry_table edit"><%= link_to 'Edit', edit_entry_path(entry) %></td>
-			<td class="entry_table delete"><%= link_to 'Destroy', entry, confirm: 'Are you sure?', method: :delete %></td>
-		  </tr>
-		<% end %>
-		</table>
--->
 
 		<br />
 

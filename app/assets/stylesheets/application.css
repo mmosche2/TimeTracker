@@ -11,6 +11,7 @@
 	margin:0px;
 	padding: 0px 20px;
 	border-bottom: 1px solid black;
+	height: 30px;
 }
 
 #UserHeader  {
@@ -44,6 +45,15 @@ a.nav_header {
 #MainContent {
 
 }	
+
+	
+/****** FOOTER ******/
+
+#Footer {
+	height: 30px;
+	border-top: 1px solid black;
+	margin-top: 20px;
+}
 	
 /****** NOTICES ******/
 .flash {
@@ -64,4 +74,8 @@ a.nav_header {
 	background:#fff6bf;
 	color:#514721;
 	border:2px solid #ffd324;
+}
+
+.clear{
+	clear: both;
 }

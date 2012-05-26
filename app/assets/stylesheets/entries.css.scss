@@ -30,6 +30,7 @@
 .header_title{
 	font-size: 18px;
 }
+	.header_title a{text-decoration:none;}
 	
 #SideProjectBox {
 	float: left;
@@ -45,6 +46,8 @@
 	li.a_project a{
 		text-decoration: underline;
 	}
+
+
 
 
 #EntriesBox {
@@ -64,25 +67,30 @@
 		margin-left: 10px;
 	}
 	.entry_row_entry_info{
-		width: 610px;
-		float: left;
+		max-width: 600px;
+		margin: 10px 0px;
 	}
-	.entry_row_action_options{
-		text-align: right;
-	}
-	.entry_row_action_options a{
-		color: #888888;
+
+	
+
+	.entry_row_entry_info a{
+		color: #BBBBBB;
 		font-size: 11px;
-		&:visited {color: #888888;}
+		&:visited {color: #BBBBBB;}
 		&:hover {
 			text-decoration: none;
 		} 
 	}
+
 	.entry_item.project{}
 	.entry_item.hours{}
 	.entry_item.tasks{}
 	.entry_item.edit{
+		border-left: 1px solid #BBB;
+		padding-left: 11px;
 	}
 	.entry_item.delete{
 	}
-	
+	.tasks_box{
+		display:inline;
+	}
