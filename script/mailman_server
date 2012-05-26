@@ -1,0 +1,18 @@
+#!/usr/bin/env ruby
+require "rubygems"
+require "bundler/setup"
+require "mailman"
+
+Mailman.config.pop3 = {
+  server: 'pop.gmail.com', port: 995, ssl: true,
+  username: "reply.to.experimentable@gmail.com",
+  password: "questrial1"
+}
+
+
+Mailman::Application.run do
+  default do
+    Entry.receive_mail(message)
+  end
+end
+
