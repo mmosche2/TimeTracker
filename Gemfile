@@ -23,11 +23,12 @@ group :assets do
 end
 
 gem 'jquery-rails'
-#gem 'daemons'
+gem 'daemons'
 gem 'mailman', require: false
 gem 'maildir'
 gem 'mail'
 gem 'whenever', require: false
+gem 'delayed_job_active_record'
 
 # Use unicorn as the web server
 # gem 'unicorn'
