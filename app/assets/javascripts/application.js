@@ -3,10 +3,19 @@
 // be included in the compiled file accessible from http://example.com/assets/application.js
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
+//= require jquery
+//= require_tree .
+
+ $(document).ready(function(){
+
+
+
+ });
 
  $(function(){
    var path = location.pathname.substring(1);
    if ( path )
-	$('#MainNavigation a.nav_header[href$="' + path + '"]').attr('class', 'nav_header active');
+	$('#UserNavBox a.nav_header[href$="' + path + '"]').attr('class', 'nav_header active');
 	
  });
+ 
