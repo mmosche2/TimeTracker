@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
 		end while User.exists?(column => self[column])
 	end
 
-	def self.daily_email
+	def self.send_daily_emails
 		@users = User.all
 		@users.each do |u|
 			UserMailer.daily_email(u).deliver
