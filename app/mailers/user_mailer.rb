@@ -3,13 +3,11 @@ class UserMailer < ActionMailer::Base
   
   def welcome_email(user)
 	@user = user
-	@url = "http://localhost:3000"
 	mail(:to => user.email, :subject => "Welcome to Experimentable!")
   end
   
   def daily_email(user)
 	@user = user
-	@url = "http://localhost:3000"
 	mail(:to => user.email, :subject => "What did you do today?")
   end
 	
