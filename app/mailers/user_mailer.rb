@@ -8,7 +8,11 @@ class UserMailer < ActionMailer::Base
   
   def daily_email(user)
 	@user = user
-	mail(:to => user.email, :subject => "What did you do today?")
+	@projects = user.projects
+	@last_entry_date = user.entries.last.cal_date
+	@latest_entries = user.entries.where("cal_date = ?", @last_entry_date)
+	@current_date = Date.today
+	mail(:to => user.email, :subject => "Reply with entries for #{@current_date}")
   end
 	
   def password_reset(user)
