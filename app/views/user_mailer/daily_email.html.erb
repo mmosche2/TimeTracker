@@ -4,40 +4,33 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-	<p>
-	Reply above this email. 
-	</p>
+	<p>Reply above this email with the following format:</p>
+	<p>@project #hrs description</p>
+	<br />
 	<h3>Your Projects:</h3>
 	<ul>
 		<% @projects.each do |p| %>
-			<li> <%= link_to p.name, project_path(p) %> </li>
+			<li> @<%= p.name %> </li>
 		<% end %>
-			
 	</ul>
 	
-	<p class="date_title"> Last entry on <%= @last_entry_date.strftime('%a, %b %d') %> </p>
-	
-	<% @latest_entries.each do |entry| %>
-			
-		<div class="row_entry">
-			<div class="entry_row_entry_info">
-				<% if entry.project %>
-					<p class="entry_item project"> <%= entry.project.name %> </p>
-				<% else %>
-					<p class="entry_item project"> {{No Project}} </p>
-				<% end %>
-				
-				<p class="entry_item hours"><%= entry.hours %></p>
-				
-				<div class="tasks_box">
-					<p class="entry_item tasks"><%= entry.tasks %></p>
-				</div>
-						
-			</div>
-		
-		</div>
-	
-	<% end %>
+	<% if @last_entry_date == "" %>
+		<p>This will be your first entry. Woohoo! </p>
+	<% else %>
+		<h3> Last entry on <%= @last_entry_date.strftime('%a, %b %d') %> </h3>
+		<ul>
+		<% @latest_entries.each do |entry| %>
+			<% if entry.project %>
+				<li> @<%= entry.project.name %> #<%= entry.hours %> <%= entry.tasks %></li>
+			<% else %>
+				<li> {{No Project}} #<%= entry.hours %> <%= entry.tasks %></li>
+			<% end %>
 
+		<% end %>
+		</ul>
+	<% end %>
+	
+	
+	
   </body>
 </html>
