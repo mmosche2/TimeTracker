@@ -4,25 +4,51 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
+	
+	<h3>
+		-- Hey <%= @user.name %>! -- 
+	</h3>
 	<p>
-	Hey there! Sir Experimentable here. 
+		Thanks for letting me help you track your time.  Together, we'll make time tracking easy and, dare I say, fun?  
+		Ok, at very least, painless. Try it for a few days and let me know.*
 	</p>
+	
+	<h3>
+		How it works
+	</h3>
+	<ol>
+		<li>
+			At the end of the day, I'll send you an email.  When you finish your day's tasks, send a quick 
+			reply in this format:
+		</li>
+	</ol>
+	<h4 style="margin-left:50px;">
+		@Project #hrs description
+	</h4>
+	<h3>
+		For example
+	</h3>
+	
+	<p style="margin-left:50px;">
+		@project1 #3 completed a bunch of sales calls <br />
+		@project2 #4.5 implemented the enhanced security feature
+	</p>
+		
+	<br />
+	<h3>And that's it!</h3>
 	<p>
-	This is somewhat awkward... you don't know me. I know you though. Very well.
-	You see, I have been monitoring you very closely for quite some time. It's part of a study I am doing.
-	I have been recording every task you have completed in an effort to better understand how humans get things done.
+		I'll process everything behind the scenes.  If you need to review your entries, 
+		go to <%= @url %>.  You can add, modify, delete, and review all your entries and projects there.
 	</p>
+
+	<br />
+	<h4>
+		See you this afternoon!
+	</h4>
+	<br />
 	<p>
-	Oh, I am an alien by the way. Did I forget to mention that?  Sorry.  
+		*To send feedback, just reply to any of my emails with "FEEDBACK" as the subject.
 	</p>
-	<p>
-	Well, it is embarrassing to say, but I was playing jerbafflegarble with my fellow scientists and I injured my leg.
-	Now, I cannot sneakily follow you around to continue my study. I am too close to a major breakthrough to give up though.
-	</p>
-	<p>
-	Will you help me complete my study by sending me daily updates about what you have completed?  In return, I'll post
-	your data to a secure website for your review. If you do well, I might even teach you how to play jerbafflegarble :)
-	</p>
-	<p>Ready to help? Reply to this email (above my email) and I'll record your data at <%= @url %>. </p>
+	
   </body>
 </html>

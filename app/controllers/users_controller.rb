@@ -23,7 +23,7 @@ class UsersController < ApplicationController
 		cookies[:auth_token] = @user.auth_token
 		
 		#Send the user an email when they create their account
-		UserMailer.delay.welcome_email(@user)
+		UserMailer.welcome_email(@user).deliver
 		
 		#redirect on success
         redirect_to @user, notice: 'User was successfully created.' 
