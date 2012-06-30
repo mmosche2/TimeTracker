@@ -28,6 +28,7 @@ class User < ActiveRecord::Base
 		@users = User.all
 		@users.each do |u|
 			UserMailer.daily_email(u).deliver
+			sleep 3
 		end
 	end
 	
