@@ -148,6 +148,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  actionmailer
   bcrypt-ruby
   coffee-rails (~> 3.1.0)
   daemons
