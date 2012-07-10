@@ -30,7 +30,7 @@ gem 'mail'
 gem 'whenever', require: false
 gem 'delayed_job_active_record'
 gem 'bcrypt-ruby'
-gem 'actionmailer'
+gem 'actionmailer', "~> 3.1.0"
 
 # Use unicorn as the web server
 # gem 'unicorn'
