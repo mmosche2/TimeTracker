@@ -24,7 +24,7 @@ end
 
 gem 'jquery-rails'
 gem 'daemons'
-gem 'mailman', "~> 0.5.2"
+gem 'mailman', "~> 0.5.2", require: false
 gem 'maildir'
 gem 'mail'
 gem 'whenever', require: false
