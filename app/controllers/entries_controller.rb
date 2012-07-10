@@ -15,7 +15,7 @@ class EntriesController < ApplicationController
 		@myto = Date.today
 	end
 	
-	@entries = current_user.entries.where("cal_date >= ? AND cal_date <= ?", @myfrom, @myto).order("cal_date ASC")
+	@entries = current_user.entries.where("cal_date >= ? AND cal_date <= ?", @myfrom, @myto).order("cal_date DESC")
   
     if (!params[:project].blank?)		
 		@filter_project = params[:project]
