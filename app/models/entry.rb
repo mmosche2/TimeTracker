@@ -39,7 +39,7 @@ class Entry < ActiveRecord::Base
 		end
 		
 		#Parse the message
-		regex_entries = /@([a-zA-Z0-9]+).*#(\d+\.?\d*)(.*)/
+		regex_entries = /@([a-zA-Z0-9]+).*#(\d*\.?\d*)(.*)/
 		myentries.scan(regex_entries) { |r|
 			myproject = r[0]
 			myhours = r[1]
