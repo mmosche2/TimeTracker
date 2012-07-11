@@ -3,12 +3,13 @@ class UserMailer < ActionMailer::Base
   
   def welcome_email(user)
 	@user = user
-	@url = "http://pure-leaf-4813.herokuapp.com/"
+	@url = "www.timefeather.com"
 	mail(:to => user.email, :subject => "Welcome to Experimentable!")
   end
   
   def daily_email(user)
 	@user = user
+	@url = "www.timefeather.com"
 	@projects = user.projects
 	if (user.entries.last) 
 		@last_entry_date = user.entries.last.cal_date
